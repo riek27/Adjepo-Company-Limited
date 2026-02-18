@@ -3,263 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | Adjepo Company Limited | Construction, Borehole & Solar Works</title>
-    <meta name="description" content="Explore completed and ongoing projects by Adjepo Company Limited including building construction, borehole drilling, solar installation, truck hire services, and general supplies across South Sudan.">
-    <meta name="keywords" content="Adjepo projects, construction projects Yei, borehole drilling South Sudan, solar installation projects, warehouse construction, hospital construction">
+    <title>Our Projects | Adjepo Company Limited | Notable Achievements in South Sudan</title>
+    <meta name="description" content="Explore Adjepo Company Limited's notable projects: Yei Civil Hospital (MSF-funded), warehouse construction, community infrastructure, borehole drilling, solar installations, and computer training in South Sudan.">
+    <meta name="keywords" content="Adjepo projects, Yei Civil Hospital, borehole drilling South Sudan, solar installation projects, warehouse construction, community infrastructure, computer training Yei">
     <meta name="author" content="Adjepo Company Limited">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://adjepocompany.com/projects">
 </head>
 <body>
 
-<header>
-    <div class="container nav-container">
-        <a href="index.html" class="logo"><i class="fas fa-building"></i>Adjepo<span>Co. Ltd</span></a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav id="mainNav">
-            <ul>
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="why-choose-us.html" class="nav-link"><i class="fas fa-star"></i> Why Choose Us</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="mobile-overlay" id="mobileOverlay"></div>
-
-<section class="projects-hero">
-    <h1>Our Projects</h1>
-</section>
-
-<section class="projects-section">
-    <div class="container">
-        <h2 class="section-title fade-in">Project Portfolio</h2>
-        <p class="section-subtitle fade-in">A showcase of our completed and ongoing works across South Sudan</p>
-        
-        <div class="projects-filter fade-in">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="construction">Construction</button>
-            <button class="filter-btn" data-filter="water">Borehole</button>
-            <button class="filter-btn" data-filter="solar">Solar</button>
-            <button class="filter-btn" data-filter="transport">Transport</button>
-            <button class="filter-btn" data-filter="supply">Supply</button>
-            <button class="filter-btn" data-filter="ongoing">Ongoing</button>
-        </div>
-        
-        <div class="projects-grid">
-
-            <!-- Construction Project -->
-            <div class="project-card fade-in" data-category="construction">
-                <div class="project-image">
-                    <img src="assets/homes.jpg" alt="Residential Construction Project Yei South Sudan">
-                    <div class="project-category">Construction</div>
-                </div>
-                <div class="project-content">
-                    <h3>Residential & Commercial Building Projects</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> Yei Town, South Sudan
-                        </div>
-                        <div class="project-status completed">Completed</div>
-                    </div>
-                    <p>Construction of modern residential homes, office buildings, warehouses, and institutional facilities delivered to professional standards.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Housing</span>
-                        <span class="project-tag">Commercial</span>
-                        <span class="project-tag">Warehouse</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hospital Project -->
-            <div class="project-card fade-in" data-category="construction ongoing">
-                <div class="project-image">
-                    <img src="assets/aajuba.jpg" alt="Hospital Construction Project South Sudan">
-                    <div class="project-category">Construction</div>
-                </div>
-                <div class="project-content">
-                    <h3>Hospital & Institutional Projects</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> South Sudan
-                        </div>
-                        <div class="project-status ongoing">Ongoing</div>
-                    </div>
-                    <p>Ongoing development of healthcare and institutional facilities designed to meet structural and functional standards.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Hospital</span>
-                        <span class="project-tag">Institutional</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Borehole Project -->
-            <div class="project-card fade-in" data-category="water">
-                <div class="project-image">
-                    <img src="assets/jubawater.jpg" alt="Borehole Drilling Project South Sudan">
-                    <div class="project-category">Borehole</div>
-                </div>
-                <div class="project-content">
-                    <h3>Community Borehole Drilling</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> Yei & Rural Areas
-                        </div>
-                        <div class="project-status completed">Completed</div>
-                    </div>
-                    <p>Drilling and installation of deep boreholes providing clean and sustainable water supply for communities and institutions.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Water System</span>
-                        <span class="project-tag">Pump Installation</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solar Project -->
-            <div class="project-card fade-in" data-category="solar ongoing">
-                <div class="project-image">
-                    <img src="assets/solar.jpg" alt="Solar Installation Project South Sudan">
-                    <div class="project-category">Solar</div>
-                </div>
-                <div class="project-content">
-                    <h3>Solar Power Installation (5KW – 50KW)</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> South Sudan
-                        </div>
-                        <div class="project-status ongoing">Ongoing</div>
-                    </div>
-                    <p>Installation of residential and commercial solar systems ranging from 5KW to 50KW for reliable power solutions.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Renewable Energy</span>
-                        <span class="project-tag">Solar Panels</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Transport Project -->
-            <div class="project-card fade-in" data-category="transport">
-                <div class="project-image">
-                    <img src="assets/jubaheavy.jpg" alt="Truck Hire Project South Sudan">
-                    <div class="project-category">Transport</div>
-                </div>
-                <div class="project-content">
-                    <h3>Truck & Car Hire Services</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> Nationwide
-                        </div>
-                        <div class="project-status completed">Completed</div>
-                    </div>
-                    <p>Transportation of construction materials, goods, and equipment across South Sudan using our reliable fleet.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Truck Hire</span>
-                        <span class="project-tag">Logistics</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Supply Project -->
-            <div class="project-card fade-in" data-category="supply">
-                <div class="project-image">
-                    <img src="assets/jubagear.jpg" alt="General Supply Project South Sudan">
-                    <div class="project-category">Supply</div>
-                </div>
-                <div class="project-content">
-                    <h3>General Supply & Equipment Delivery</h3>
-                    <div class="project-meta">
-                        <div class="project-location">
-                            <i class="fas fa-map-marker-alt"></i> Yei & Regional Areas
-                        </div>
-                        <div class="project-status completed">Completed</div>
-                    </div>
-                    <p>Supply of construction materials, office supplies, safety equipment, and procurement services for institutions and businesses.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Procurement</span>
-                        <span class="project-tag">Safety Gear</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="cta-section section-bg-light">
-    <div class="container">
-        <div class="about-home-stats">
-            <div class="about-stat-item fade-in">
-                <div class="about-stat-number">40+</div>
-                <div class="about-stat-label">Projects Completed</div>
-            </div>
-            <div class="about-stat-item fade-in">
-                <div class="about-stat-number">15+</div>
-                <div class="about-stat-label">Ongoing Projects</div>
-            </div>
-            <div class="about-stat-item fade-in">
-                <div class="about-stat-number">50+</div>
-                <div class="about-stat-label">Satisfied Clients</div>
-            </div>
-            <div class="about-stat-item fade-in">
-                <div class="about-stat-number">8+</div>
-                <div class="about-stat-label">Years Experience</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-content fade-in">
-            <h2>Have a Project in Mind?</h2>
-            <p>Let Adjepo Company Limited deliver your next construction, water, solar, or logistics project with professionalism and quality assurance.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-cta"><i class="fas fa-lightbulb"></i> Discuss Your Project</a>
-                <a href="tel:+211921329242" class="btn btn-cta-outline">
-                    <i class="fas fa-phone"></i> Call for Consultation
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <div class="footer-logo">Adjepo<span>Co. Ltd</span></div>
-                <p>Providing construction, borehole drilling, solar installation, truck hire, training, and supply services across South Sudan.</p>
-            </div>
-            <div class="footer-links footer-contact">
-                <h3 class="footer-heading">Contact Info</h3>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-building"></i>Adjepo<span>Co. Ltd</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
                 <ul>
-                    <li><a href="tel:+211921329242"><i class="fas fa-phone"></i> +211 921 329 242</a></li>
-                    <li><a href="mailto:adjepocompanylimited@gmail.com"><i class="fas fa-envelope"></i> info@adjepocompanylimited.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Jamia Street, Yei Town, South Sudan</li>
-                    <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown" id="servicesDropdown">
+                            <li><a href="services.html#construction"><i class="fas fa-home"></i> Building Construction</a></li>
+                            <li><a href="services.html#borehole"><i class="fas fa-water"></i> Borehole Drilling</a></li>
+                            <li><a href="services.html#solar"><i class="fas fa-solar-panel"></i> Solar Installation</a></li>
+                            <li><a href="services.html#design"><i class="fas fa-paint-roller"></i> Interior & Exterior Design</a></li>
+                            <li><a href="services.html#architectural"><i class="fas fa-drafting-compass"></i> Architectural & Structural Works</a></li>
+                            <li><a href="services.html#truck-hire"><i class="fas fa-truck"></i> Truck & Car Hire</a></li>
+                            <li><a href="services.html#computer-training"><i class="fas fa-laptop"></i> Computer Training</a></li>
+                            <li><a href="services.html#secretarial"><i class="fas fa-print"></i> Secretarial Services</a></li>
+                            <li><a href="services.html#general-supplies"><i class="fas fa-boxes"></i> General Supplies</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="why-choose-us.html" class="nav-link"><i class="fas fa-star"></i> Why Choose Us</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <h1>Our Notable Projects & Achievements</h1>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Project Portfolio</h2>
+            <p class="section-subtitle fade-in">Delivering impact through quality work in Yei and across South Sudan</p>
+            
+            <div class="projects-filter fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="water">Water</button>
+                <button class="filter-btn" data-filter="energy">Energy</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="supply">Supply</button>
+                <button class="filter-btn" data-filter="transport">Transport</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Yei Civil Hospital (MSF-funded) -->
+                <div class="project-card fade-in" data-category="healthcare construction completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1473&q=80" alt="Yei Civil Hospital construction funded by MSF">
+                        <div class="project-category">Healthcare</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Yei Civil Hospital (MSF-funded)</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei, South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Civil works at Yei Civil Hospital funded by Médecins Sans Frontières (MSF), improving healthcare infrastructure for the community.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Healthcare</span>
+                            <span class="project-tag">MSF</span>
+                            <span class="project-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Warehouse Construction (60m x 40m) -->
+                <div class="project-card fade-in" data-category="industrial construction completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1471&q=80" alt="Large warehouse construction 60m x 40m">
+                        <div class="project-category">Industrial</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Warehouse Construction (60m x 40m)</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei, South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Spacious warehouse built to store goods and materials, showcasing our capacity for large-scale industrial structures.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Warehouse</span>
+                            <span class="project-tag">Industrial</span>
+                            <span class="project-tag">Large-scale</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Hospital & Community Infrastructure (umbrella) -->
+                <div class="project-card fade-in" data-category="infrastructure healthcare ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1453&q=80" alt="Hospital and community infrastructure projects">
+                        <div class="project-category">Infrastructure</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Community Health Infrastructure</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Multiple Locations
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Multiple hospital and community infrastructure projects that serve and uplift local populations across South Sudan.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Healthcare</span>
+                            <span class="project-tag">Community</span>
+                            <span class="project-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Borehole Drilling Launch 2025 -->
+                <div class="project-card fade-in" data-category="water construction ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&w=1470&q=80" alt="Borehole drilling services introduced in 2025">
+                        <div class="project-category">Water</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Borehole Drilling Launch 2025</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei & Surrounding Areas
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Introduction of professional borehole drilling services to increase access to clean water for communities and institutions.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Water</span>
+                            <span class="project-tag">Borehole</span>
+                            <span class="project-tag">Community</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Solar Power Installations -->
+                <div class="project-card fade-in" data-category="energy construction completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1472&q=80" alt="Solar power installation packages">
+                        <div class="project-category">Energy</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Solar Power Installations (5KW – 50KW)</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Homes & Businesses
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Complete solar packages for residential and commercial clients, providing reliable, renewable energy solutions.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Solar</span>
+                            <span class="project-tag">Renewable Energy</span>
+                            <span class="project-tag">Installation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Computer Training Programs -->
+                <div class="project-card fade-in" data-category="training ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1471&q=80" alt="Computer training programs">
+                        <div class="project-category">Training</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Professional Computer Training</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei, South Sudan
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Ongoing computer training programs empowering individuals with essential digital skills, from basic literacy to advanced courses.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Education</span>
+                            <span class="project-tag">Computer Skills</span>
+                            <span class="project-tag">Community</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7: General Supplies - Office Furniture -->
+                <div class="project-card fade-in" data-category="supply completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Office furniture supply">
+                        <div class="project-category">General Supply</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Office & Home Furniture Supply</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei & Juba
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Supply of quality office and home furniture to businesses, institutions, and private clients.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Furniture</span>
+                            <span class="project-tag">Office Supply</span>
+                            <span class="project-tag">Home</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8: General Supplies - Safety Equipment -->
+                <div class="project-card fade-in" data-category="supply completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" alt="Safety equipment supply">
+                        <div class="project-category">General Supply</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Safety Gear & Workwear Supply</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Nationwide
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Supply of safety pads, overalls, helmets, and protective equipment to construction sites and industries.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Safety Equipment</span>
+                            <span class="project-tag">Workwear</span>
+                            <span class="project-tag">PPE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9: Truck Hire Services -->
+                <div class="project-card fade-in" data-category="transport ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Truck hire services">
+                        <div class="project-category">Transport</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Reliable Truck & Car Hire</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei & Regional
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Fleet of trucks and vehicles available for short and long-term hire, supporting logistics and transportation needs.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Truck Hire</span>
+                            <span class="project-tag">Logistics</span>
+                            <span class="project-tag">Transport</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 10: Secretarial Services -->
+                <div class="project-card fade-in" data-category="supply ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1526628953302-3fdbb1199c0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Secretarial and printing services">
+                        <div class="project-category">Secretarial</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Printing & Secretarial Services</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei Town
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Comprehensive secretarial support including printing, photocopying, binding, and document preparation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Printing</span>
+                            <span class="project-tag">Secretarial</span>
+                            <span class="project-tag">Office Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 11: Architectural & Structural Works -->
+                <div class="project-card fade-in" data-category="construction completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Architectural design and structural works">
+                        <div class="project-category">Architectural</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Architectural Design Projects</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Various Locations
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Custom architectural designs and structural engineering for residential and commercial buildings.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Design</span>
+                            <span class="project-tag">Structural</span>
+                            <span class="project-tag">Planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 12: Interior & Exterior Design -->
+                <div class="project-card fade-in" data-category="construction ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Interior and exterior design">
+                        <div class="project-category">Design</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interior & Exterior Finishing</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>Transformative interior and exterior design projects enhancing residential and commercial spaces.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Interior Design</span>
+                            <span class="project-tag">Exterior</span>
+                            <span class="project-tag">Finishing</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>© 2026 Adjepo Company Limited. All rights reserved.</p>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="cta-section section-bg-light">
+        <div class="container">
+            <div class="about-home-stats">
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">50+</div>
+                    <div class="about-stat-label">Projects Completed</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">5+</div>
+                    <div class="about-stat-label">Years Experience</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">100%</div>
+                    <div class="about-stat-label">Client Commitment</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">2025</div>
+                    <div class="about-stat-label">Borehole Launch</div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<a href="#" class="back-to-top" id="backToTop">
-    <i class="fas fa-chevron-up"></i>
-</a>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Have a Project in Mind?</h2>
+                <p>Let's discuss how Adjepo Company Limited can bring your vision to life with quality, integrity, and professional service.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-cta"><i class="fas fa-lightbulb"></i> Discuss Your Project</a>
+                    <a href="tel:+211921329242" class="btn btn-cta-outline">
+                        <i class="fas fa-phone"></i> Call for Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Adjepo<span>Co. Ltd</span></div>
+                    <p>Proudly South Sudanese company providing quality construction, borehole drilling, solar installation, training, and supply services across the region.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="why-choose-us.html"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#construction"><i class="fas fa-chevron-right"></i> Building Construction</a></li>
+                        <li><a href="services.html#borehole"><i class="fas fa-chevron-right"></i> Borehole Drilling</a></li>
+                        <li><a href="services.html#solar"><i class="fas fa-chevron-right"></i> Solar Installation</a></li>
+                        <li><a href="services.html#design"><i class="fas fa-chevron-right"></i> Interior & Exterior Design</a></li>
+                        <li><a href="services.html#architectural"><i class="fas fa-chevron-right"></i> Architectural & Structural Works</a></li>
+                        <li><a href="services.html#truck-hire"><i class="fas fa-chevron-right"></i> Truck & Car Hire</a></li>
+                        <li><a href="services.html#computer-training"><i class="fas fa-chevron-right"></i> Computer Training</a></li>
+                        <li><a href="services.html#secretarial"><i class="fas fa-chevron-right"></i> Secretarial Services</a></li>
+                        <li><a href="services.html#general-supplies"><i class="fas fa-chevron-right"></i> General Supplies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:+211921329242"><i class="fas fa-phone"></i> +211 921 329 242</a></li>
+                        <li><a href="mailto:adjepocompanylimited@gmail.com"><i class="fas fa-envelope"></i> info@adjepocompanylimited.com</a></li>
+                        <li><a href="https://maps.google.com/?q=Jamia+Street+Yei+South+Sudan" target="_blank"><i class="fas fa-map-marker-alt"></i> Jamia Street, Yei Town, Yei, South Sudan</a></li>
+                        <li><a href="https://wa.me/211921329242" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +211 921 329 242</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Adjepo Company Limited. All rights reserved. | Yei, South Sudan</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>

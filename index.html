@@ -3,1397 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C&M Custom Homes | Premier Custom Home Builder in Upstate SC</title>
+    <title>Adjepo Company Limited | Construction, Borehole & Solar Experts in South Sudan</title>
+    <meta name="description" content="Adjepo Company Limited provides construction, borehole drilling, solar installation, truck hire, computer training, and general supply services in Yei Town and across South Sudan.">
+    <meta name="keywords" content="Adjepo Company Limited, construction Yei, borehole drilling South Sudan, solar installation Yei, truck hire South Sudan, computer training Yei, general supply South Sudan">
+    <meta name="author" content="Adjepo Company Limited">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* ===== CSS RESET & GLOBAL STYLES ===== */
-        :root {
-            --primary-dark: #1a472a;
-            --primary-light: #2d5a3b;
-            --accent-gold: #c9a86a;
-            --light-bg: #f9f7f2;
-            --dark-text: #333333;
-            --light-text: #ffffff;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-text);
-            background-color: var(--light-bg);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 1.8rem; }
-
-        p {
-            margin-bottom: 1.5rem;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--light-text);
-            padding: 14px 32px;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-dark {
-            background-color: var(--primary-dark);
-        }
-
-        .btn-dark:hover {
-            background-color: var(--primary-light);
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--primary-dark);
-            position: relative;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-gold);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* ===== HEADER & NAVIGATION ===== */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            padding: 5px 0;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--accent-gold);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav li {
-            margin-left: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-gold);
-        }
-
-        nav a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--accent-gold);
-            left: 0;
-            bottom: -5px;
-            transition: var(--transition);
-        }
-
-        nav a:hover:after, nav a.active:after {
-            width: 100%;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--primary-dark);
-        }
-
-        /* ===== PAGE CONTENT SECTIONS (Initially Hidden) ===== */
-        .page-content {
-            display: none;
-            opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
-            margin-top: 80px;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        .page-content.active {
-            display: block;
-        }
-
-        /* ===== HOME PAGE ===== */
-        #home-page {
-            display: block;
-        }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--light-text);
-            padding-top: 0;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .values {
-            background-color: var(--light-bg);
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .value-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .value-card i {
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-        }
-
-        .testimonials {
-            background-color: #fff;
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            min-height: 300px;
-        }
-
-        .testimonial {
-            background-color: var(--light-bg);
-            padding: 40px;
-            border-radius: 8px;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-
-        .testimonial.active {
-            opacity: 1;
-            position: relative;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-dark);
-        }
-
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .dot.active {
-            background-color: var(--accent-gold);
-        }
-
-        /* ===== ABOUT PAGE ===== */
-        .about-intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-img {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .team-section {
-            background-color: var(--light-bg);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .team-member {
-            text-align: center;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border: 5px solid var(--light-bg);
-        }
-
-        /* ===== SERVICES PAGE ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .service-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .service-content {
-            padding: 30px;
-        }
-
-        .service-content h3 {
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
-
-        .service-content ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .service-content li {
-            margin-bottom: 8px;
-        }
-
-        /* ===== GALLERY PAGE ===== */
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 600;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--primary-dark);
-            color: white;
-            border-color: var(--primary-dark);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .gallery-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            height: 250px;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 20px;
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        /* ===== BLOG PAGE ===== */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .blog-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .blog-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .blog-content {
-            padding: 25px;
-        }
-
-        .blog-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        .blog-content h3 {
-            margin-bottom: 15px;
-            color: var(--primary-dark);
-        }
-
-        .blog-content p {
-            margin-bottom: 20px;
-        }
-
-        /* ===== CONTACT PAGE ===== */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
-
-        .contact-info {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
-        }
-
-        .contact-info h3 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-
-        .contact-detail i {
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent-gold);
-            transform: translateY(-5px);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 70px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo span {
-            color: var(--accent-gold);
-        }
-
-        .footer-links h4, .footer-newsletter h4 {
-            color: white;
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
-            padding-left: 5px;
-        }
-
-        .newsletter-form input {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 4px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 992px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.2rem; }
-            .hero h1 { font-size: 3.2rem; }
-            .about-intro { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            nav ul {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-                transform: translateY(-150%);
-                transition: transform 0.5s ease;
-                z-index: 999;
-            }
-
-            nav ul.active {
-                transform: translateY(0);
-            }
-
-            nav li {
-                margin: 15px 0;
-            }
-
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            section { padding: 70px 0; }
-        }
-
-        @media (max-width: 576px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            .hero h1 { font-size: 2rem; }
-            .btn { padding: 12px 25px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ===== HEADER & NAVIGATION ===== -->
-    <header id="main-header">
-        <div class="container header-container">
-            <a href="#" class="logo" data-page="home">C&M <span>Custom Homes</span></a>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+
+<header>
+    <div class="container nav-container">
+        <a href="index.html" class="logo"><i class="fas fa-building"></i>Adjepo<span>Co. Ltd</span></a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="why-choose-us.html" class="nav-link"><i class="fas fa-star"></i> Why Choose Us</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Professional Construction, Borehole & Solar Services in South Sudan</h1>
+        <div class="typewriter-container">
+            <span class="typewriter-text" id="typewriterText"></span>
+        </div>
+        <div class="hero-buttons">
+            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="contact.html#quote" class="btn btn-outline"><i class="fas fa-file-alt"></i> Get a Quote</a>
+        </div>
+    </div>
+</section>
+
+<section class="about-home-section">
+    <div class="container">
+        <div class="about-home-content fade-in">
+            <div class="about-home-image">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1470&q=80" alt="Adjepo Company Limited Construction Project">
             </div>
-            <nav>
-                <ul id="nav-menu">
-                    <li><a href="#" data-page="home" class="active">Home</a></li>
-                    <li><a href="#" data-page="about">About</a></li>
-                    <li><a href="#" data-page="services">Services</a></li>
-                    <li><a href="#" data-page="gallery">Gallery</a></li>
-                    <li><a href="#" data-page="blog">Blog</a></li>
-                    <li><a href="#" data-page="contact">Contact</a></li>
+            <div class="about-home-text">
+                <h2>About Adjepo Company Limited</h2>
+                <p>Adjepo Company Limited is a proudly South Sudanese-owned company based in Yei Town. We specialize in construction, borehole drilling, solar installation, truck hire, architectural services, computer training, and general supplies.</p>
+                <p>We focus on delivering technically sound projects without compromising quality. Our commitment is professionalism, integrity, and client satisfaction.</p>
+
+                <div class="about-home-stats">
+                    <div class="about-stat-item">
+                        <div class="about-stat-number">5+</div>
+                        <div class="about-stat-label">Years Experience</div>
+                    </div>
+                    <div class="about-stat-item">
+                        <div class="about-stat-number">70+</div>
+                        <div class="about-stat-label">Projects Completed</div>
+                    </div>
+                    <div class="about-stat-item">
+                        <div class="about-stat-number">100%</div>
+                        <div class="about-stat-label">Commitment to Quality</div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn-about"><i class="fas fa-arrow-right"></i> Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-preview-section section-bg-light">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Professional Services</h2>
+        <p class="section-subtitle fade-in">Reliable solutions for homes, businesses, NGOs and institutions across South Sudan</p>
+
+        <div class="services-preview-grid">
+
+            <div class="service-preview-card fade-in">
+                <div class="service-preview-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Building Construction</h3>
+                <p>Residential, commercial, hospital, and warehouse construction delivered to modern engineering standards.</p>
+                <ul class="service-preview-list">
+                    <li><i class="fas fa-check"></i> Residential Homes</li>
+                    <li><i class="fas fa-check"></i> Hospital Projects</li>
+                    <li><i class="fas fa-check"></i> Warehouse Construction</li>
+                    <li><i class="fas fa-check"></i> Renovation & Finishing</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ===== HOME PAGE ===== -->
-    <main id="home-page" class="page-content active">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Your Premier Custom Home Builder in Upstate South Carolina</h1>
-                <p>With timeless design and quality made to last, don't settle for just another house. Let C&M build you a home.</p>
-                <a href="#" class="btn" data-page="contact">Start Your Journey</a>
             </div>
-        </section>
 
-        <section class="values">
-            <div class="container">
-                <h2 class="section-title">Why Choose C&M Custom Homes</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-home"></i>
-                        <h3>Timeless Design</h3>
-                        <p>Our homes epitomize refined luxury with impeccable architectural elements and exquisite finishes that stand the test of time.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Outstanding Service</h3>
-                        <p>We prioritize your experience, ensuring the building process is smooth, transparent, and enjoyable from start to finish.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-award"></i>
-                        <h3>Impeccable Craftsmanship</h3>
-                        <p>We use only the highest quality materials and employ skilled craftsmen dedicated to excellence in every detail.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-calendar-check"></i>
-                        <h3>On-Time Completion</h3>
-                        <p>Your project should finish on time. We work diligently to meet deadlines, respecting your time and investment.</p>
-                    </div>
+            <div class="service-preview-card fade-in">
+                <div class="service-preview-icon">
+                    <i class="fas fa-water"></i>
                 </div>
+                <h3>Borehole Drilling</h3>
+                <p>Clean and reliable water solutions for communities, institutions, and organizations.</p>
+                <ul class="service-preview-list">
+                    <li><i class="fas fa-check"></i> Deep Borehole Drilling</li>
+                    <li><i class="fas fa-check"></i> Pump Installation</li>
+                    <li><i class="fas fa-check"></i> Water Systems</li>
+                    <li><i class="fas fa-check"></i> Maintenance Services</li>
+                </ul>
             </div>
-        </section>
 
-        <section class="testimonials">
-            <div class="container">
-                <h2 class="section-title">Don't Just Take Our Word For It</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial active">
-                        <p class="testimonial-text">"When we got ready to build our dream home, C&M Custom Homes came highly recommended... Carroll took as much time as we needed to work out all the details and did an excellent job from start to finish. C&M was professional, courteous, and attentive to all of our needs."</p>
-                        <p class="testimonial-author">- Brian & Beth Guy</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"Carroll Bishop and his staff are second to none. They walked us through every step of the process, from drawing up plans to walk-through and house keys... They finished the build in a timely fashion and were always available when we had a question."</p>
-                        <p class="testimonial-author">- KP, Satisfied Client</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"We enjoyed the total experience; from beginning to completion! Curtis and Mark helped in every detail of this product to ensure a very positive and fun experience. We could not have had a better experience."</p>
-                        <p class="testimonial-author">- Happy Homeowner</p>
-                    </div>
+            <div class="service-preview-card fade-in">
+                <div class="service-preview-icon">
+                    <i class="fas fa-solar-panel"></i>
                 </div>
-                <div class="slider-dots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                </div>
+                <h3>Solar Power Installation</h3>
+                <p>Affordable 5KW – 50KW solar systems for homes, offices, and institutions.</p>
+                <ul class="service-preview-list">
+                    <li><i class="fas fa-check"></i> Residential Solar</li>
+                    <li><i class="fas fa-check"></i> Commercial Solar</li>
+                    <li><i class="fas fa-check"></i> Installation</li>
+                    <li><i class="fas fa-check"></i> Maintenance</li>
+                </ul>
             </div>
-        </section>
-    </main>
 
-    <!-- ===== ABOUT PAGE ===== -->
-    <section id="about-page" class="page-content">
-        <div class="container">
-            <h2 class="section-title">About C&M Custom Homes</h2>
-            <div class="about-intro">
-                <div>
-                    <h3>Transforming Your Vision into Reality</h3>
-                    <p>At C&M Custom Homes, we value the individuality of each client when building their dream home. Our team is committed to transforming your vision into reality, whether it's a contemporary and elegant style or a timeless and traditional aesthetic.</p>
-                    <p>Recognizing the complexities and time demands of custom home construction, we prioritize outstanding customer service and impeccable craftsmanship. Building your dream home can feel intimidating, but we're here to make the process easier and more enjoyable.</p>
-                    <p>Your builder should treat your home as if it were their own. That's our promise to you.</p>
-                    <a href="#" class="btn" data-page="contact">Schedule a Consultation</a>
+            <div class="service-preview-card fade-in">
+                <div class="service-preview-icon">
+                    <i class="fas fa-truck"></i>
                 </div>
-                <div class="about-img">
-                    <img src="assets/archi.jpg" alt="Luxury custom home exterior">
-                </div>
+                <h3>Truck & Car Hire</h3>
+                <p>Reliable transportation of construction materials and logistics support across South Sudan.</p>
+                <ul class="service-preview-list">
+                    <li><i class="fas fa-check"></i> Truck Hire</li>
+                    <li><i class="fas fa-check"></i> Equipment Haulage</li>
+                    <li><i class="fas fa-check"></i> Material Transport</li>
+                    <li><i class="fas fa-check"></i> Logistics Support</li>
+                </ul>
             </div>
+
         </div>
 
-        <section class="team-section">
-            <div class="container">
-                <h2 class="section-title">Meet Our Team</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Meet our dedicated team, a group of skilled and passionate professionals committed to crafting your luxury dream home with unmatched precision and elegance[citation:1].</p>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Carroll Bishop">
-                        <h3>Carroll Bishop</h3>
-                        <p>Founder & Lead Builder</p>
-                        <p>With over 20 years of experience in custom home building, Carroll ensures every project meets our exacting standards of quality and design.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project Manager">
-                        <h3>Mark Johnson</h3>
-                        <p>Project Manager</p>
-                        <p>Mark oversees every detail of your build, coordinating teams and timelines to ensure your home is completed on schedule and to perfection.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Design Specialist">
-                        <h3>Sarah Williams</h3>
-                        <p>Design Specialist</p>
-                        <p>Sarah works closely with clients to translate their vision into workable designs that balance aesthetics, functionality, and budget.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
+        <div class="text-center fade-in">
+            <a href="services.html" class="btn btn-services"><i class="fas fa-arrow-right"></i> See All Services</a>
+        </div>
+    </div>
+</section>
 
-    <!-- ===== SERVICES PAGE ===== -->
-    <section id="services-page" class="page-content">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">We tailor each building process to the individual needs and budget of the homeowner[citation:4]. Our team specializes in providing exceptional building experiences, complete with a finished product of impeccable quality and appeal.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Custom Home Construction" class="service-img">
-                    <div class="service-content">
-                        <h3>Custom Home Construction</h3>
-                        <p>From groundbreaking to final walkthrough, we manage the entire construction process with precision and care.</p>
-                        <ul>
-                            <li>Complete project management</li>
-                            <li>Quality craftsmanship at every stage</li>
-                            <li>Regular progress updates</li>
-                            <li>Final inspection and quality assurance</li>
-                        </ul>
-                        <a href="#" class="btn btn-dark" data-page="contact">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Site Selection" class="service-img">
-                    <div class="service-content">
-                        <h3>Site Selection & Analysis</h3>
-                        <p>We provide in-depth analysis of potential sites to ensure suitability for your specific needs[citation:6].</p>
-                        <ul>
-                            <li>Detailed assessment of potential sites</li>
-                            <li>Geographical and environmental analysis</li>
-                            <li>Regulatory compliance verification</li>
-                            <li>Future property value consideration</li>
-                        </ul>
-                        <a href="#" class="btn btn-dark" data-page="contact">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w-1350&q=80" alt="Permitting" class="service-img">
-                    <div class="service-content">
-                        <h3>Permitting & Legal Compliance</h3>
-                        <p>We take the complexity out of permitting and compliance, ensuring a hassle-free process for our clients[citation:1].</p>
-                        <ul>
-                            <li>Complete permit application handling</li>
-                            <li>Current knowledge of all regulations</li>
-                            <li>Inspection coordination</li>
-                            <li>Risk mitigation and delay prevention</li>
-                        </ul>
-                        <a href="#" class="btn btn-dark" data-page="contact">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Design Consultation" class="service-img">
-                    <div class="service-content">
-                        <h3>Design Consultation</h3>
-                        <p>Our design specialists work with you to create spaces that reflect your personality and meet your lifestyle needs.</p>
-                        <ul>
-                            <li>Personalized design concepts</li>
-                            <li>Material and finish selection</li>
-                            <li>3D visualization of spaces</li>
-                            <li>Budget-conscious planning</li>
-                        </ul>
-                        <a href="#" class="btn btn-dark" data-page="contact">Learn More</a>
-                    </div>
-                </div>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content fade-in">
+            <h2>Let’s Build & Power Your Next Project</h2>
+            <p>Contact Adjepo Company Limited today for construction, borehole drilling, solar installation and professional services.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-cta"><i class="fas fa-calendar-alt"></i> Start Your Project</a>
+                <a href="tel:+211921329242" class="btn btn-cta-outline">
+                    <i class="fas fa-phone"></i> Call Us: +211 921 329 242
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== GALLERY PAGE ===== -->
-    <section id="gallery-page" class="page-content">
-        <div class="container">
-            <h2 class="section-title">Our Gallery</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Experience the zenith of artistry, innovation, and opulence with our handpicked showcases. Each snapshot narrates a tale of aspirations realized[citation:4].</p>
-            
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="exterior">Exteriors</button>
-                <button class="filter-btn" data-filter="interior">Interiors</button>
-                <button class="filter-btn" data-filter="kitchen">Kitchens</button>
-                <button class="filter-btn" data-filter="living">Living Spaces</button>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-about">
+                <div class="footer-logo">Adjepo<span>Co. Ltd</span></div>
+                <p>Delivering quality construction, borehole drilling, solar installation, and general supply services across South Sudan.</p>
             </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Luxury Home Exterior">
-                    <div class="gallery-overlay">
-                        <h4>Modern Farmhouse Estate</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Grand Living Room">
-                    <div class="gallery-overlay">
-                        <h4>Grand Living Room</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="kitchen">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Gourmet Kitchen">
-                    <div class="gallery-overlay">
-                        <h4>Gourmet Kitchen</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Mountain View Home">
-                    <div class="gallery-overlay">
-                        <h4>Mountain View Retreat</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="living">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cozy Family Room">
-                    <div class="gallery-overlay">
-                        <h4>Cozy Family Room</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Master Bedroom Suite">
-                    <div class="gallery-overlay">
-                        <h4>Master Bedroom Suite</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="kitchen">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Modern Kitchen">
-                    <div class="gallery-overlay">
-                        <h4>Modern Kitchen Design</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Traditional Home">
-                    <div class="gallery-overlay">
-                        <h4>Traditional Elegance</h4>
-                    </div>
-                </div>
+
+            <div class="footer-links footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul>
+                    <li><a href="tel:+211921329242"><i class="fas fa-phone"></i> +211 921 329 242</a></li>
+                    <li><a href="mailto:adjepocompanylimited@gmail.com"><i class="fas fa-envelope"></i> info@adjepocompanylimited.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jamia Street, Yei Town, South Sudan</li>
+                    <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+                </ul>
             </div>
+
         </div>
-    </section>
 
-    <!-- ===== BLOG PAGE ===== -->
-    <section id="blog-page" class="page-content">
-        <div class="container">
-            <h2 class="section-title">Latest News & Insights</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Stay updated with the latest trends in custom home building, design inspiration, and helpful tips for your home building journey.</p>
-            
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="assets/asa.jpg" alt="Sustainable Building" class="blog-img">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> Dec 3, 2025</span>
-                            <span><i class="far fa-folder"></i> Design</span>
-                        </div>
-                        <h3>Sustainable Materials for Modern Custom Homes</h3>
-                        <p>Explore how sustainable building materials are shaping the future of custom home construction while reducing environmental impact.</p>
-                        <a href="#" class="btn btn-dark">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Open Concept Living" class="blog-img">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> Nov 20, 2025</span>
-                            <span><i class="far fa-folder"></i> Lifestyle</span>
-                        </div>
-                        <h3>Maximizing Space: Open Concept vs. Defined Rooms</h3>
-                        <p>Discover the pros and cons of open concept living versus traditional defined rooms to determine what's best for your lifestyle.</p>
-                        <a href="#" class="btn btn-dark">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Budget Planning" class="blog-img">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> Nov 5, 2025</span>
-                            <span><i class="far fa-folder"></i> Planning</span>
-                        </div>
-                        <h3>Budgeting for Your Custom Home: What to Expect</h3>
-                        <p>Learn about the key cost factors in custom home building and how to create a realistic budget for your dream home project.</p>
-                        <a href="#" class="btn btn-dark">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Interior Design Trends" class="blog-img">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> Oct 18, 2025</span>
-                            <span><i class="far fa-folder"></i> Trends</span>
-                        </div>
-                        <h3>2025 Interior Design Trends for Custom Homes</h3>
-                        <p>Stay ahead of the curve with the latest interior design trends that are transforming custom homes this year.</p>
-                        <a href="#" class="btn btn-dark">Read More</a>
-                    </div>
-                </div>
-            </div>
+        <div class="copyright">
+            <p>© 2026 Adjepo Company Limited. All rights reserved.</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- ===== CONTACT PAGE ===== -->
-    <section id="contact-page" class="page-content">
-        <div class="container">
-            <h2 class="section-title">Ready To Get Started On Your Dream Home?</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Contact us today to schedule a consultation with one of our experts. We look forward to working with you!</p>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Our Office</h4>
-                            <p>5087 Highway Nine<br>Inman, SC 29349</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone Number</h4>
-                            <p>(864) 586-1162</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Address</h4>
-                            <p>info@cmcustomhomes.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 8am - 6pm<br>Saturday: 9am - 2pm</p>
-                        </div>
-                    </div>
-                    
-                    <h3 style="margin-top: 40px;">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="message" placeholder="Your message" required></textarea>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</a>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">C&M <span>Custom Homes</span></div>
-                    <p>The most sought after custom home builder in Upstate South Carolina. With timeless design and quality made to last, we build more than just houses – we build homes.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#" data-page="home">Home</a></li>
-                        <li><a href="#" data-page="about">About Us</a></li>
-                        <li><a href="#" data-page="services">Our Services</a></li>
-                        <li><a href="#" data-page="gallery">Project Gallery</a></li>
-                        <li><a href="#" data-page="blog">Blog</a></li>
-                        <li><a href="#" data-page="contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for the latest in custom home design and construction.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 C&M Custom Homes. All rights reserved. | Premier Custom Home Builder in Upstate South Carolina</p>
-            </div>
-        </div>
-    </footer>
+<script src="script.js"></script>
 
-    <script>
-        // ===== GLOBAL VARIABLES =====
-        const header = document.getElementById('main-header');
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-        const pageContents = document.querySelectorAll('.page-content');
-        const navLinks = document.querySelectorAll('nav a');
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const testimonialSlides = document.querySelectorAll('.testimonial');
-        const dots = document.querySelectorAll('.dot');
-        const contactForm = document.getElementById('contactForm');
-        let currentSlide = 0;
-        let slideInterval;
-
-        // ===== STICKY HEADER =====
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // ===== MOBILE MENU TOGGLE =====
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.querySelector('i').classList.toggle('fa-bars');
-            hamburger.querySelector('i').classList.toggle('fa-times');
-        });
-
-        // ===== PAGE NAVIGATION =====
-        function showPage(pageId) {
-            // Hide all pages
-            pageContents.forEach(page => {
-                page.classList.remove('active');
-                page.style.display = 'none';
-            });
-            
-            // Show selected page
-            const activePage = document.getElementById(`${pageId}-page`);
-            if (activePage) {
-                activePage.classList.add('active');
-                activePage.style.display = 'block';
-                window.scrollTo(0, 0);
-            }
-            
-            // Update active nav link
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('data-page') === pageId) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Close mobile menu if open
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.querySelector('i').classList.remove('fa-times');
-                hamburger.querySelector('i').classList.add('fa-bars');
-            }
-        }
-
-        // ===== NAV LINK CLICK HANDLERS =====
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('data-page');
-                showPage(pageId);
-            });
-        });
-
-        // Footer link click handlers
-        document.querySelectorAll('.footer-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('data-page');
-                showPage(pageId);
-            });
-        });
-
-        // Button click handlers
-        document.querySelectorAll('.btn[data-page]').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = button.getAttribute('data-page');
-                showPage(pageId);
-            });
-        });
-
-        // ===== GALLERY FILTERING =====
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // ===== TESTIMONIAL SLIDER =====
-        function showSlide(n) {
-            // Hide all slides
-            testimonialSlides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-            
-            // Remove active class from all dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Update current slide index
-            currentSlide = (n + testimonialSlides.length) % testimonialSlides.length;
-            
-            // Show current slide and activate corresponding dot
-            testimonialSlides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        // Initialize the slider
-        function initSlider() {
-            if (testimonialSlides.length > 0) {
-                // Start automatic sliding
-                slideInterval = setInterval(nextSlide, 5000);
-                
-                // Dot click handlers
-                dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        clearInterval(slideInterval);
-                        showSlide(index);
-                        slideInterval = setInterval(nextSlide, 5000);
-                    });
-                });
-            }
-        }
-
-        // ===== FORM SUBMISSION =====
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(contactForm);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const subject = formData.get('subject');
-                const message = formData.get('message');
-                
-                // In a real application, you would send this data to a server
-                // For this example, we'll just show an alert
-                alert(`Thank you ${name}! Your message has been sent. We will contact you at ${email} soon.`);
-                
-                // Reset form
-                contactForm.reset();
-            });
-        }
-
-        // Newsletter form submission
-        const newsletterForm = document.querySelector('.newsletter-form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const emailInput = newsletterForm.querySelector('input[type="email"]');
-                alert(`Thank you for subscribing with ${emailInput.value}! You'll receive our updates soon.`);
-                emailInput.value = '';
-            });
-        }
-
-        // ===== INITIALIZE ON DOM LOAD =====
-        document.addEventListener('DOMContentLoaded', () => {
-            // Show home page by default
-            showPage('home');
-            
-            // Initialize testimonial slider
-            initSlider();
-            
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    if (this.getAttribute('href') === '#') return;
-                    
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-
-        // ===== REVEAL ANIMATION ON SCROLL =====
-        const revealElements = document.querySelectorAll('.value-card, .service-card, .blog-card, .team-member');
-        
-        function revealOnScroll() {
-            const windowHeight = window.innerHeight;
-            const revealPoint = 150;
-            
-            revealElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                
-                if (elementTop < windowHeight - revealPoint) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        }
-        
-        // Set initial state for reveal elements
-        revealElements.forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        });
-        
-        window.addEventListener('scroll', revealOnScroll);
-        // Trigger once on load in case elements are already in view
-        window.addEventListener('load', revealOnScroll);
-    </script>
 </body>
 </html>

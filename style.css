@@ -399,7 +399,7 @@ header {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(26, 54, 93, 0.45), rgba(26, 54, 93, 0.45)),
-                url('assets/homes.jpg') no-repeat center center;
+                url('assets/adjed.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed; /* Parallax effect */
     z-index: -1;
@@ -960,7 +960,7 @@ header {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(212, 160, 23, 0.9), rgba(212, 160, 23, 0.85)),
-                url('https://images.unsplash.com/photo-1503387769-00a112127ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+                url('assets/adjeo.jpg') no-repeat center center fixed;
     background-size: cover;
     z-index: -1;
     animation: ctaZoom 20s ease-in-out infinite alternate;

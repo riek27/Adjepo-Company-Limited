@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!typewriterElement) return;
         
         const texts = [
-            "Building South Sudan's Future",
-            "Quality Construction Since 2020",
-            "Trusted Engineering Experts",
-            "Affordable Building Solutions"
+            "Engineering Progress for South Sudan",
+            "Quality Construction & Infrastructure Development",
+            "Sustainable Water & Solar Energy Solutions",
+            "Professional. Reliable. Trusted."
         ];
         
         let textIndex = 0;

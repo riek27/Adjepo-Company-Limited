@@ -1201,7 +1201,7 @@ section {
 /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
 .about-hero {
     background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.8)),
-                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+                url('assets/adje.jpg') no-repeat center center;
     background-size: cover;
     min-height: 50vh;
     display: flex;
@@ -1373,36 +1373,37 @@ section {
     line-height: 1.7;
 }
 
-/* ===== TEAM SECTION (with images) ===== */
+/* ===== TEAM SECTION (Single Profile) ===== */
 .team-section {
     padding: var(--space-xl) 0;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: var(--space-lg);
 }
 
 .team-card {
+    max-width: 800px;
     background: white;
-    border-radius: 8px;
-    padding: var(--space-md);
+    border-radius: 12px;
+    padding: var(--space-lg);
     text-align: center;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-xl);
 }
 
 .team-image {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto var(--space-sm);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--space-md);
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--primary);
@@ -1416,7 +1417,7 @@ section {
 }
 
 .team-card h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.25rem;
     color: var(--secondary);
 }
@@ -1424,26 +1425,47 @@ section {
 .team-title {
     font-weight: 600;
     color: var(--primary);
-    margin-bottom: var(--space-xs);
-    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+    font-size: 1.25rem;
 }
 
 .team-bio {
-    font-size: 0.95rem;
-    color: var(--gray);
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--dark);
+    line-height: 1.8;
+    text-align: left;
+    margin-top: var(--space-md);
+}
+
+.team-bio p {
+    margin-bottom: var(--space-sm);
+}
+
+.team-bio p:last-child {
     margin-bottom: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .team-card {
+        padding: var(--space-md);
+    }
+    
     .team-image {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
     
     .team-card h3 {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
+    }
+    
+    .team-title {
+        font-size: 1.1rem;
+    }
+    
+    .team-bio {
+        font-size: 1rem;
     }
 }
 /* ===== SERVICES SECTION ===== */

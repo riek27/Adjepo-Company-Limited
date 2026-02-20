@@ -719,6 +719,52 @@ header {
     font-size: 1.125rem;
 }
 
+/* Service Preview Image */
+.service-preview-image {
+    width: calc(100% + 4rem); /* expands to full card width (since card has 2rem padding on sides) */
+    margin: -2rem -2rem 1.5rem -2rem; /* negative margin to counteract card padding */
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.service-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.service-preview-card:hover .service-preview-image img {
+    transform: scale(1.05);
+}
+
+/* Adjust icon position and spacing */
+.service-preview-icon {
+    margin-top: 0.5rem; /* slight separation from image */
+}
+
+/* Ensure card content remains readable */
+.service-preview-card {
+    padding: 0 2rem 2rem 2rem; /* keep bottom/side padding, but remove top padding */
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    .service-preview-image {
+        height: 160px;
+        margin: -2rem -1.5rem 1.5rem -1.5rem; /* if card padding changes, adjust */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-preview-image {
+        height: 140px;
+        margin: -2rem -1.5rem 1.5rem -1.5rem;
+    }
+}
+
 /* Projects Preview Section Improvements */
 .projects-preview-section {
     padding: var(--space-xl) 0;

@@ -237,13 +237,26 @@ header {
     gap: 0.5rem;
 }
 
-.logo i {
-    color: var(--primary);
-    font-size: 2rem;
+/* Logo with image */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* Remove font-family, font-size, font-weight, color, gap if no longer needed */
 }
 
-.logo span {
-    color: var(--primary);
+.logo img {
+    display: block;          /* Removes extra space below the image */
+    max-height: 60px;        /* Adjust to fit your header height */
+    width: auto;             /* Maintain aspect ratio */
+    height: auto;
+    object-fit: contain;     /* Ensures the image scales nicely */
+}
+
+/* Optional: If you want to keep the gap between logo and nav items, 
+   you can add margin-right to the logo instead of using gap */
+.logo {
+    margin-right: 1rem;       /* Creates space after the logo */
 }
 
 /* Main Navigation */

@@ -1572,6 +1572,91 @@ section {
     color: var(--primary);
 }
 
+/* Service Detail Card with Image */
+.service-detail-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;           /* keeps image corners rounded */
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    padding: 0 0 var(--space-lg) 0;  /* remove top padding, keep bottom */
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-top-color: var(--primary);
+}
+
+/* Full-width image at the top */
+.service-detail-image {
+    width: 100%;
+    height: 200px;              /* fixed height – adjust as needed */
+    overflow: hidden;
+    margin-bottom: var(--space-md);  /* space between image and header */
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* ensures image covers area without distortion */
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.service-detail-card:hover .service-detail-image img {
+    transform: scale(1.05);     /* subtle zoom on hover */
+}
+
+/* Adjust header and content spacing */
+.service-detail-header {
+    padding: 0 var(--space-lg);  /* restore side padding */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-detail-content {
+    padding: 0 var(--space-lg);
+}
+
+/* Farming subsections styling (already present, but kept for completeness) */
+.service-section {
+    margin-top: var(--space-md);
+}
+
+.service-section h4 {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-detail-image {
+        height: 160px;
+    }
+    
+    .service-detail-header {
+        padding: 0 var(--space-md);
+    }
+    
+    .service-detail-content {
+        padding: 0 var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-detail-image {
+        height: 140px;
+    }
+}
+
 /* ===== PROJECTS PAGE SPECIFIC STYLES ===== */
 .projects-hero {
     background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.8)),

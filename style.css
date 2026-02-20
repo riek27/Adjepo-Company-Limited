@@ -4,8 +4,8 @@
 /* ===== CSS RESET & GLOBAL STYLES ===== */
 :root {
     /* Premium Color Palette */
-    --primary: #d4a017; /* Gold accent - represents quality */
-    --primary-dark: #b38914;
+    --primary: #2563eb;      /* Blue */
+    --primary-dark: #1e40af; /* Darker blue */
     --secondary: #1a365d; /* Dark blue - represents trust */
     --secondary-light: #2d4a7c;
     --accent: #c53030; /* Red accent - for CTAs */

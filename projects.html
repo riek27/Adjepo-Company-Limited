@@ -13,6 +13,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://adjepocompany.com/projects">
+
+    /* Project Image Gallery - Scoped styles, zero conflict with existing CSS */
+    .proj-gallery-section {
+        padding: 70px 0;
+        background: #fafafa;
+        border-top: 1px solid rgba(0, 0, 0, 0.04);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+    .proj-gallery-section .section-title {
+        text-align: center;
+        margin-bottom: 12px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 2.2rem;
+        color: #1a1a1a;
+    }
+    .proj-gallery-section .section-subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #666;
+        font-size: 1.05rem;
+    }
+    .proj-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .proj-gallery-item {
+        overflow: hidden;
+        border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        aspect-ratio: 4 / 3;
+        background: #e8e8e8;
+    }
+    .proj-gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
+    }
+    .proj-gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .proj-gallery-item:hover img {
+        transform: scale(1.06);
+    }
+    @media (max-width: 992px) {
+        .proj-gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .proj-gallery-section {
+            padding: 50px 0;
+        }
+        .proj-gallery-section .section-title {
+            font-size: 1.9rem;
+        }
+    }
+    @media (max-width: 576px) {
+        .proj-gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            padding: 0 12px;
+        }
+        .proj-gallery-section {
+            padding: 36px 0;
+        }
+        .proj-gallery-section .section-title {
+            font-size: 1.6rem;
+        }
+        .proj-gallery-item {
+            border-radius: 10px;
+            aspect-ratio: 16 / 10;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -20,7 +102,7 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-        <img src="assets/adjeplogo.png" alt="Adjepo Company Limited">
+                <img src="assets/adjeplogo.png" alt="Adjepo Company Limited">
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -65,7 +147,7 @@
         <div class="container">
             <h2 class="section-title fade-in">Project Portfolio</h2>
             <p class="section-subtitle fade-in">Delivering impact through quality work in Yei and across South Sudan</p>
-            
+
             <div class="projects-filter fade-in">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="construction">Construction</button>
@@ -78,7 +160,7 @@
                 <button class="filter-btn" data-filter="transport">Transport</button>
                 <button class="filter-btn" data-filter="ongoing">Ongoing</button>
             </div>
-            
+
             <div class="projects-grid">
                 <!-- Project 1: Yei Civil Hospital (MSF-funded) -->
                 <div class="project-card fade-in" data-category="healthcare construction completed">
@@ -102,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2: Warehouse Construction (60m x 40m) -->
                 <div class="project-card fade-in" data-category="industrial construction completed">
                     <div class="project-image">
@@ -125,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3: Hospital & Community Infrastructure (umbrella) -->
                 <div class="project-card fade-in" data-category="infrastructure healthcare ongoing">
                     <div class="project-image">
@@ -148,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 4: Borehole Drilling Launch 2025 -->
                 <div class="project-card fade-in" data-category="water construction ongoing">
                     <div class="project-image">
@@ -171,7 +253,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 5: Solar Power Installations -->
                 <div class="project-card fade-in" data-category="energy construction completed">
                     <div class="project-image">
@@ -194,7 +276,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 6: Computer Training Programs -->
                 <div class="project-card fade-in" data-category="training ongoing">
                     <div class="project-image">
@@ -217,62 +299,62 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project: Construction of G+1 Storey Four Bedroom -->
-<div class="project-card fade-in" data-category="construction completed">
-    <div class="project-image">
-        <img src="assets/adjee.png" alt="G+1 four bedroom house construction">
-        <div class="project-category">Construction</div>
-    </div>
-    <div class="project-content">
-        <h3>Construction of G+1 Storey Four Bedroom</h3>
-        <div class="project-meta">
-            <div class="project-location">
-                <i class="fas fa-map-marker-alt"></i> Jigomoni Residential Area
-            </div>
-            <div class="project-status completed">Completed</div>
-        </div>
-        <p>
-            Construction of a modern G+1 storey four-bedroom residential house 
-            in the Jigomoni residential area, built with high-quality materials 
-            and professional workmanship.
-        </p>
-        <div class="project-tags">
-            <span class="project-tag">Residential</span>
-            <span class="project-tag">G+1 Building</span>
-            <span class="project-tag">Four Bedroom</span>
-        </div>
-    </div>
-</div>
-                
+                <div class="project-card fade-in" data-category="construction completed">
+                    <div class="project-image">
+                        <img src="assets/adjee.png" alt="G+1 four bedroom house construction">
+                        <div class="project-category">Construction</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Construction of G+1 Storey Four Bedroom</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Jigomoni Residential Area
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>
+                            Construction of a modern G+1 storey four-bedroom residential house
+                            in the Jigomoni residential area, built with high-quality materials
+                            and professional workmanship.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Residential</span>
+                            <span class="project-tag">G+1 Building</span>
+                            <span class="project-tag">Four Bedroom</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 8: Ongoing Construction & Renovation Projects -->
-<div class="project-card fade-in" data-category="construction ongoing">
-    <div class="project-image">
-        <img src="assets/adjeren.png" alt="Transitional shelters and school construction">
-        <div class="project-category">Construction</div>
-    </div>
-    <div class="project-content">
-        <h3>Ongoing Construction & School Renovation Projects</h3>
-        <div class="project-meta">
-            <div class="project-location">
-                <i class="fas fa-map-marker-alt"></i> Yei, Lainya, Kupera Pay
-            </div>
-            <div class="project-status ongoing">Completed</div>
-        </div>
-        <p>
-            Construction of 8 transitional shelters for people in need in Yei and Lainya Counties, 
-            construction works at Aggrey Jaden Secondary School, and renovation of Jamara Primary 
-            School in Kupera Pay. The project is implemented by MASS with funding support from UNHCR.
-        </p>
-        <div class="project-tags">
-            <span class="project-tag">Transitional Shelters</span>
-            <span class="project-tag">School Construction</span>
-            <span class="project-tag">School Renovation</span>
-            <span class="project-tag">UNHCR Funded</span>
-        </div>
-    </div>
-</div>
-                
+                <div class="project-card fade-in" data-category="construction ongoing">
+                    <div class="project-image">
+                        <img src="assets/adjeren.png" alt="Transitional shelters and school construction">
+                        <div class="project-category">Construction</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Ongoing Construction & School Renovation Projects</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei, Lainya, Kupera Pay
+                            </div>
+                            <div class="project-status ongoing">Completed</div>
+                        </div>
+                        <p>
+                            Construction of 8 transitional shelters for people in need in Yei and Lainya Counties,
+                            construction works at Aggrey Jaden Secondary School, and renovation of Jamara Primary
+                            School in Kupera Pay. The project is implemented by MASS with funding support from UNHCR.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Transitional Shelters</span>
+                            <span class="project-tag">School Construction</span>
+                            <span class="project-tag">School Renovation</span>
+                            <span class="project-tag">UNHCR Funded</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 9: Truck Hire Services -->
                 <div class="project-card fade-in" data-category="transport ongoing">
                     <div class="project-image">
@@ -295,87 +377,115 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 10: Office Renovation -->
-<div class="project-card fade-in" data-category="construction completed">
-    <div class="project-image">
-        <img src="assets/adjena.png" alt="Renovation of South Sudan National Revenue Authority office">
-        <div class="project-category">Construction</div>
-    </div>
-    <div class="project-content">
-        <h3>Renovation of South Sudan National Revenue Authority Office</h3>
-        <div class="project-meta">
-            <div class="project-location">
-                <i class="fas fa-map-marker-alt"></i> South Sudan
-            </div>
-            <div class="project-status completed">Completed</div>
-        </div>
-        <p>
-            Renovation of the office premises of the South Sudan National Revenue Authority, 
-            funded by SIRIC Investment Co. Ltd. The project involved upgrading office spaces, 
-            interior improvements, and structural enhancements to meet modern standards.
-        </p>
-        <div class="project-tags">
-            <span class="project-tag">Office Renovation</span>
-            <span class="project-tag">Institutional Project</span>
-            <span class="project-tag">SIRIC Funded</span>
-        </div>
-    </div>
-</div>
-                
+                <div class="project-card fade-in" data-category="construction completed">
+                    <div class="project-image">
+                        <img src="assets/adjena.png" alt="Renovation of South Sudan National Revenue Authority office">
+                        <div class="project-category">Construction</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Renovation of South Sudan National Revenue Authority Office</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>
+                            Renovation of the office premises of the South Sudan National Revenue Authority,
+                            funded by SIRIC Investment Co. Ltd. The project involved upgrading office spaces,
+                            interior improvements, and structural enhancements to meet modern standards.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Office Renovation</span>
+                            <span class="project-tag">Institutional Project</span>
+                            <span class="project-tag">SIRIC Funded</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 11: Poultry and Piggery Farming -->
-<div class="project-card fade-in" data-category="agriculture completed">
-    <div class="project-image">
-        <img src="assets/adjepig.png" alt="Poultry and piggery farming project">
-        <div class="project-category">Agriculture</div>
-    </div>
-    <div class="project-content">
-        <h3>Poultry and Piggery Farming</h3>
-        <div class="project-meta">
-            <div class="project-location">
-                <i class="fas fa-map-marker-alt"></i> South Sudan
-            </div>
-            <div class="project-status completed">Completed</div>
-        </div>
-        <p>
-            Establishment and management of poultry and piggery farming operations 
-            aimed at improving food security, livestock production, and sustainable 
-            agricultural development.
-        </p>
-        <div class="project-tags">
-            <span class="project-tag">Poultry</span>
-            <span class="project-tag">Piggery</span>
-            <span class="project-tag">Agriculture</span>
-        </div>
-    </div>
-</div>
+                <div class="project-card fade-in" data-category="agriculture completed">
+                    <div class="project-image">
+                        <img src="assets/adjepig.png" alt="Poultry and piggery farming project">
+                        <div class="project-category">Agriculture</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Poultry and Piggery Farming</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>
+                            Establishment and management of poultry and piggery farming operations
+                            aimed at improving food security, livestock production, and sustainable
+                            agricultural development.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Poultry</span>
+                            <span class="project-tag">Piggery</span>
+                            <span class="project-tag">Agriculture</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 12: Modern Kitchen Construction -->
-<div class="project-card fade-in" data-category="construction ongoing">
-    <div class="project-image">
-        <img src="assets/adjeyei.png" alt="Construction of Modern Kitchen at Yei Civil Hospital">
-        <div class="project-category">Construction</div>
-    </div>
-    <div class="project-content">
-        <h3>Construction of Modern Kitchen at Yei Civil Hospital</h3>
-        <div class="project-meta">
-            <div class="project-location">
-                <i class="fas fa-map-marker-alt"></i> Yei, South Sudan
+                <div class="project-card fade-in" data-category="construction ongoing">
+                    <div class="project-image">
+                        <img src="assets/adjeyei.png" alt="Construction of Modern Kitchen at Yei Civil Hospital">
+                        <div class="project-category">Construction</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Construction of Modern Kitchen at Yei Civil Hospital</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Yei, South Sudan
+                            </div>
+                            <div class="project-status ongoing">Completed</div>
+                        </div>
+                        <p>
+                            Construction of a modern kitchen facility at Yei Civil Hospital,
+                            funded by CARNAK South Sudan. The project included structural works,
+                            installation of modern kitchen fittings, plumbing, electrical systems,
+                            and finishing to meet healthcare and safety standards.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Building Construction</span>
+                            <span class="project-tag">Healthcare Project</span>
+                            <span class="project-tag">Modern Kitchen</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-status ongoing">Completed</div>
         </div>
-        <p>
-            Construction of a modern kitchen facility at Yei Civil Hospital, 
-            funded by CARNAK South Sudan. The project included structural works, 
-            installation of modern kitchen fittings, plumbing, electrical systems, 
-            and finishing to meet healthcare and safety standards.
-        </p>
-        <div class="project-tags">
-            <span class="project-tag">Building Construction</span>
-            <span class="project-tag">Healthcare Project</span>
-            <span class="project-tag">Modern Kitchen</span>
-        </div>
-    </div>
-</div>
+    </section>
+
+    <!-- Project Image Gallery -->
+    <section class="proj-gallery-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Project Gallery</h2>
+            <p class="section-subtitle fade-in">A visual journey through our completed and ongoing works</p>
+            <div class="proj-gallery-grid">
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adjehos.png" alt="Yei Civil Hospital construction project" loading="lazy">
+                </div>
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adje.jpg" alt="Large warehouse construction 60m x 40m" loading="lazy">
+                </div>
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adjecom.png" alt="Community health infrastructure projects" loading="lazy">
+                </div>
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adjedril.png" alt="Borehole drilling services launch 2025" loading="lazy">
+                </div>
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adjee.png" alt="G+1 storey four bedroom residential house" loading="lazy">
+                </div>
+                <div class="proj-gallery-item fade-in">
+                    <img src="assets/adjeren.png" alt="School construction and transitional shelters" loading="lazy">
                 </div>
             </div>
         </div>

@@ -13,87 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://adjepocompany.com/projects">
-
-    /* Project Image Gallery - Scoped styles, zero conflict with existing CSS */
-    .proj-gallery-section {
-        padding: 70px 0;
-        background: #fafafa;
-        border-top: 1px solid rgba(0, 0, 0, 0.04);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-    }
-    .proj-gallery-section .section-title {
-        text-align: center;
-        margin-bottom: 12px;
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        font-size: 2.2rem;
-        color: #1a1a1a;
-    }
-    .proj-gallery-section .section-subtitle {
-        text-align: center;
-        margin-bottom: 40px;
-        color: #666;
-        font-size: 1.05rem;
-    }
-    .proj-gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    .proj-gallery-item {
-        overflow: hidden;
-        border-radius: 14px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-        aspect-ratio: 4 / 3;
-        background: #e8e8e8;
-    }
-    .proj-gallery-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
-    }
-    .proj-gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    .proj-gallery-item:hover img {
-        transform: scale(1.06);
-    }
-    @media (max-width: 992px) {
-        .proj-gallery-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-        .proj-gallery-section {
-            padding: 50px 0;
-        }
-        .proj-gallery-section .section-title {
-            font-size: 1.9rem;
-        }
-    }
-    @media (max-width: 576px) {
-        .proj-gallery-grid {
-            grid-template-columns: 1fr;
-            gap: 14px;
-            padding: 0 12px;
-        }
-        .proj-gallery-section {
-            padding: 36px 0;
-        }
-        .proj-gallery-section .section-title {
-            font-size: 1.6rem;
-        }
-        .proj-gallery-item {
-            border-radius: 10px;
-            aspect-ratio: 16 / 10;
-        }
-    }
 </style>
 </head>
 <body>
@@ -464,32 +383,83 @@
     </section>
 
     <!-- Project Image Gallery -->
-    <section class="proj-gallery-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Project Gallery</h2>
-            <p class="section-subtitle fade-in">A visual journey through our completed and ongoing works</p>
-            <div class="proj-gallery-grid">
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayes.jpeg" alt="Yei Civil Hospital construction project" loading="lazy">
-                </div>
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayess.jpeg" alt="Large warehouse construction 60m x 40m" loading="lazy">
-                </div>
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayesss.jpeg" alt="Community health infrastructure projects" loading="lazy">
-                </div>
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayea.jpeg" alt="Borehole drilling services launch 2025" loading="lazy">
-                </div>
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayeaa.jpeg" alt="G+1 storey four bedroom residential house" loading="lazy">
-                </div>
-                <div class="proj-gallery-item fade-in">
-                    <img src="assets/ayeah.jpeg" alt="School construction and transitional shelters" loading="lazy">
-                </div>
+<section class="proj-gallery-section">
+    <style>
+        /* Force proper gallery grid layout – higher specificity avoids conflicts */
+        section.proj-gallery-section .proj-gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 22px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section.proj-gallery-section .proj-gallery-item {
+            overflow: hidden;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            aspect-ratio: 4 / 3;
+            background: #e8e8e8;
+        }
+        section.proj-gallery-section .proj-gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+        }
+        section.proj-gallery-section .proj-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        section.proj-gallery-section .proj-gallery-item:hover img {
+            transform: scale(1.06);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            section.proj-gallery-section .proj-gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px;
+            }
+        }
+        @media (max-width: 576px) {
+            section.proj-gallery-section .proj-gallery-grid {
+                grid-template-columns: 1fr !important;
+                gap: 14px;
+                padding: 0 12px;
+            }
+            section.proj-gallery-section .proj-gallery-item {
+                border-radius: 10px;
+                aspect-ratio: 16 / 10;
+            }
+        }
+    </style>
+    <div class="container">
+        <h2 class="section-title fade-in">Project Gallery</h2>
+        <p class="section-subtitle fade-in">A visual journey through our completed and ongoing works</p>
+        <div class="proj-gallery-grid">
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayes.jpeg" alt="Yei Civil Hospital construction project" loading="lazy">
+            </div>
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayess.jpeg" alt="Large warehouse construction 60m x 40m" loading="lazy">
+            </div>
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayesss.jpeg" alt="Community health infrastructure projects" loading="lazy">
+            </div>
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayea.jpeg" alt="Borehole drilling services launch 2025" loading="lazy">
+            </div>
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayeaa.jpeg" alt="G+1 storey four bedroom residential house" loading="lazy">
+            </div>
+            <div class="proj-gallery-item fade-in">
+                <img src="assets/ayeah.jpeg" alt="School construction and transitional shelters" loading="lazy">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Project Stats -->
     <section class="cta-section section-bg-light">

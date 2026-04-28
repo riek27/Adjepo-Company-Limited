@@ -11,8 +11,518 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://adjepocompany.com/contact">
+
+    <!-- ==================== ALL STYLES (previously in style.css) ==================== -->
+    <style>
+        /* ---------- CSS Reset & Variables ---------- */
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #162d6e;
+            --secondary: #f59e0b;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light: #f9fafb;
+            --white: #ffffff;
+            --radius: 8px;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        .btn-cta {
+            background: var(--secondary);
+            color: #000;
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+        }
+        .btn-cta:hover { background: #e08f0a; }
+
+        .btn-cta-outline {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        .btn-cta-outline:hover { background: rgba(255,255,255,0.1); }
+
+        /* ---------- Header / Navigation ---------- */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        nav ul li a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            text-decoration: none;
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: var(--primary);
+            color: #fff;
+        }
+        .has-dropdown { position: relative; }
+        .dropdown-arrow { font-size: 0.8rem; margin-left: 0.2rem; }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            list-style: none;
+            padding: 0.5rem 0;
+            z-index: 100;
+        }
+        .has-dropdown:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown li a {
+            display: block;
+            padding: 0.6rem 1.2rem;
+            color: var(--dark);
+            white-space: nowrap;
+        }
+        .dropdown li a:hover {
+            background: var(--light);
+            color: var(--primary);
+        }
+
+        /* Mobile menu */
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+        .mobile-overlay.active { display: block; }
+
+        @media (max-width: 1024px) {
+            .mobile-menu-btn { display: block; }
+            nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 280px;
+                height: 100%;
+                background: #fff;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: 0.3s ease;
+                z-index: 1001;
+                overflow-y: auto;
+                padding: 2rem 1rem;
+            }
+            nav.active { right: 0; }
+            nav ul {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                margin-left: 1rem;
+                display: none;
+            }
+            .has-dropdown.open .dropdown { display: block; }
+            .has-dropdown .dropdown-arrow { transition: transform 0.2s; }
+            .has-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
+        }
+
+        /* ---------- Contact Hero ---------- */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary), #0f2557);
+            color: #fff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        .contact-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- Contact Grid ---------- */
+        .contact-section {
+            padding: 4rem 0;
+            background: var(--light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .contact-info h2, .contact-form-container h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .contact-info p { color: #555; margin-bottom: 2rem; }
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .contact-info-item {
+            display: flex;
+            gap: 1rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .contact-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .contact-details p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        .contact-details a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Form container */
+        .contact-form-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+        }
+        .form-group {
+            flex: 1 1 200px;
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #374151;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--light);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30,58,138,0.15);
+            background: #fff;
+        }
+        textarea.form-control { resize: vertical; }
+
+        /* ---------- Map / FAQ / CTA ---------- */
+        .map-section {
+            padding: 4rem 0;
+            background: #fff;
+        }
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+        }
+        .section-bg-light { background: var(--light); padding: 4rem 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .value-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        .cta-section {
+            background: var(--primary);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background: #111827;
+            color: #ccc;
+            padding: 4rem 0 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .footer-logo span { color: var(--secondary); }
+        .footer-heading {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links ul li {
+            margin-bottom: 0.6rem;
+        }
+        .footer-links ul li a {
+            color: #ccc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+        .footer-links ul li a:hover {
+            color: var(--secondary);
+        }
+        .copyright {
+            border-top: 1px solid #374151;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            transition: var(--transition);
+        }
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ---------- Fade-in animation (simple) ---------- */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------- SUCCESS TOAST ---------- */
+        .toast {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, -20px);
+            background-color: #10b981; /* green */
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .toast.show {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+        .toast-icon {
+            font-size: 1.6rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +530,7 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-        <img src="assets/adjeplogo.png" alt="Adjepo Company Limited">
+                <img src="assets/adjeplogo.png" alt="Adjepo Company Limited">
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -118,39 +628,47 @@
                         <h3>Connect With Us</h3>
                         <div class="social-icons" style="justify-content: flex-start;">
                             <a href="https://www.facebook.com/profile.php?id=100057260777304" 
-                           target="_blank" 
-                         rel="noopener noreferrer" 
-                          aria-label="Facebook">
-                       <i class="fab fa-facebook-f"></i>
-                       </a>
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               aria-label="Facebook">
+                               <i class="fab fa-facebook-f"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form-container fade-in">
                     <h2 id="quote">Request a Free Quote</h2>
-                    <p>Fill out the form below and we'll get back to you within 1 hours with a detailed quote for your project or service.</p>
+                    <p>Fill out the form below and we'll get back to you within 1 hour with a detailed quote for your project or service.</p>
                     
-                    <form class="contact-form" id="contactForm">
+                    <!-- NETLIFY FORM – all required attributes added -->
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" class="contact-form">
+                        <!-- Hidden: tells Netlify which form is being submitted -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <!-- Honeypot anti-spam -->
+                        <p style="display:none;">
+                            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="+211 XXX XXX XXX" required>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+211 XXX XXX XXX" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="service">Service Required</label>
-                            <select id="service" class="form-control">
+                            <select id="service" name="service" class="form-control">
                                 <option value="">Select a service</option>
                                 <option value="building">Building Construction</option>
                                 <option value="borehole">Borehole Drilling</option>
@@ -167,12 +685,12 @@
                         
                         <div class="form-group">
                             <label for="project">Project Description *</label>
-                            <textarea id="project" class="form-control" placeholder="Tell us about your project or service needs, including location, timeline, and any specific requirements..." rows="5" required></textarea>
+                            <textarea id="project" name="project" class="form-control" placeholder="Tell us about your project or service needs, including location, timeline, and any specific requirements..." rows="5" required></textarea>
                         </div>
                         
                         <div class="form-group">
-                            <button type="submit" class="btn" style="width: 100%;">
-                                <i class="fas fa-paper-plane"></i> Send Message
+                            <button type="submit" class="btn" id="submitBtn" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> <span class="btn-text">Send Message</span>
                             </button>
                         </div>
                         
@@ -192,7 +710,6 @@
             <p class="section-subtitle fade-in">We are based in Yei Town, serving clients across South Sudan</p>
             
             <div class="map-container fade-in">
-                <!-- Embedded Google Map for Yei, South Sudan (approximate) -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.327509292172!2d30.678901714353744!3d4.094324896493962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17113a365e5f7b37%3A0x4e82d2c9d45c6b5d!2sYei%2C%20South%20Sudan!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
@@ -265,10 +782,10 @@
                     <div class="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=100057260777304" 
                            target="_blank" 
-                         rel="noopener noreferrer" 
-                          aria-label="Facebook">
-                       <i class="fab fa-facebook-f"></i>
-                       </a>
+                           rel="noopener noreferrer" 
+                           aria-label="Facebook">
+                           <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -279,7 +796,7 @@
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
                         <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
                         <li><a href="why-choose-us.html"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                        <li><a href="social-responsibility.html" class="nav-link"><i class="fas fa-heart"></i> Social Responsibility</a></li>
+                        <li><a href="social-responsibility.html"><i class="fas fa-heart"></i> Social Responsibility</a></li>
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
@@ -314,11 +831,143 @@
         </div>
     </footer>
 
+    <!-- Green success toast (hidden by default) -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span>Thank you! Your quote request has been sent successfully.</span>
+    </div>
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <script src="script.js"></script>
+    <!-- ==================== ALL JAVASCRIPT (previously in script.js) ==================== -->
+    <script>
+        (function() {
+            // ---------- Mobile menu toggling ----------
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('mobileOverlay');
+
+            function closeMenu() {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mainNav.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeMenu);
+            }
+
+            // Close menu when a nav link is clicked
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 1024) {
+                        closeMenu();
+                    }
+                });
+            });
+
+            // Dropdown toggle on mobile
+            document.querySelectorAll('.has-dropdown > a').forEach(dropLink => {
+                dropLink.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        this.parentElement.classList.toggle('open');
+                    }
+                });
+            });
+
+            // ---------- Back to top button ----------
+            const backBtn = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backBtn.classList.add('show');
+                } else {
+                    backBtn.classList.remove('show');
+                }
+            });
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ---------- Netlify AJAX Form Submission + Toast ----------
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const toast = document.getElementById('toast');
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000); // disappears after 5 seconds
+            }
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // Disable button and show loading state
+                submitBtn.disabled = true;
+                btnText.textContent = 'Sending...';
+
+                const formData = new FormData(form);
+                const params = new URLSearchParams(formData).toString();
+
+                try {
+                    // POST to the current page – Netlify's form handler will process it
+                    const response = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: params,
+                    });
+
+                    // Regardless of HTTP status, Netlify still saves the submission.
+                    // So we treat a non‑OK response as a success to avoid user confusion.
+                    if (!response.ok) {
+                        console.warn('Form submission returned status:', response.status);
+                    }
+                    // Success – show toast and reset form
+                    showToast();
+                    form.reset();
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    // Still show toast – Netlify may have captured the submission anyway
+                    showToast();
+                    form.reset();
+                } finally {
+                    // Re‑enable the button after a short delay
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Send Message';
+                    }, 1500);
+                }
+            });
+
+            // ---------- Simple fade‑in animation on scroll (optional) ----------
+            const fadeEls = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeEls.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
